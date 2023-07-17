@@ -1,0 +1,20 @@
+{
+  "name": "51230-clase-32-optimization",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-compression": "^1.0.2",
+    "express-handlebars": "^7.0.7"
+  },
+  "type": "module"
+}
