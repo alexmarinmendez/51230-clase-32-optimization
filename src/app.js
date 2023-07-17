@@ -7,6 +7,9 @@ import compression from 'express-compression'
 
 
 const app = express()
+app.use(compression({
+    brotli: { enabled: true, zlib: {} }
+}))
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -19,7 +22,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api/products', productRouter)
 app.use('/api/users', userRouter)
 
-app.get('/stringlargo', compression(), (req, res) => {
+app.get('/stringlargo', (req, res) => {
     let string = 'Este string es muy largo para el request'
     for (let index = 0; index < 10e4; index++) {
         string += '<br>Estamos haciendo este string aun mas largo.'
